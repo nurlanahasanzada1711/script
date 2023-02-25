@@ -1,13 +1,20 @@
-let alisveris_meblegi = 2000
-let endirim1 = (alisveris_meblegi * 95) / 100
-let endirim2 = (alisveris_meblegi * 92) / 100
-let endirim3 = (alisveris_meblegi * 90) / 100
-if (alisveris_meblegi < 100) {
-    console.log(endirim1);
+const qiymet = 1
+const ilk_faiz = 20
+const ikinci_faiz = 50
+const ucuncu_faiz = 75
+let saat = 7
+let umumi_mebleg
+if (saat <= 3) {
+    umumi_mebleg = vaxt * qiymet
 }
-else if (alisveris_meblegi >= 100 && alisveris_meblegi <= 1000) {
-    console.log(endirim2);
+else if (saat >= 3 && saat <= 5) {
+    umumi_mebleg = 3 * qiymet + (qiymet - (qiymet * ilk_faiz) / 100) * (saat - 3);
 }
-else {
-    console.log(endirim3);
+else if (saat <= 8) {
+    umumi_mebleg = 3 * qiymet + (qiymet - (qiymet * ilk_faiz) / 100) * (saat - 6) + (qiymet - (qiymet * ikinci_faiz) / 100) * (time - 5);
 }
+else if (time > 8) {
+    umumi_mebleg = (qiymet - (qiymet * ucuncu_faiz) / 100) * saat;
+}
+console.log(umumi_mebleg);
+
